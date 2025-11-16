@@ -1,0 +1,155 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 40 25% 97%;
+    --foreground: 25 15% 15%;
+
+    --card: 40 30% 96%;
+    --card-foreground: 25 15% 15%;
+
+    --popover: 40 30% 96%;
+    --popover-foreground: 25 15% 15%;
+
+    --primary: 25 35% 25%;
+    --primary-foreground: 40 30% 96%;
+
+    --secondary: 35 20% 85%;
+    --secondary-foreground: 25 35% 25%;
+
+    --muted: 35 15% 88%;
+    --muted-foreground: 25 10% 45%;
+
+    --accent: 15 25% 75%;
+    --accent-foreground: 25 35% 25%;
+
+    --destructive: 0 70% 55%;
+    --destructive-foreground: 40 30% 96%;
+
+    --border: 35 15% 88%;
+    --input: 35 15% 88%;
+    --ring: 25 35% 25%;
+
+    --radius: 0.5rem;
+
+    /* Custom tokens for the fashion site */
+    --warm-beige: 40 25% 90%;
+    --soft-brown: 25 35% 35%;
+    --dusty-rose: 15 25% 75%;
+    --cream: 45 30% 94%;
+    --espresso: 20 30% 20%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--warm-beige)), hsl(var(--cream)));
+    --gradient-card: linear-gradient(180deg, hsl(var(--card)), hsl(var(--warm-beige) / 0.5));
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px hsl(var(--soft-brown) / 0.1);
+    --shadow-elegant: 0 8px 30px hsl(var(--soft-brown) / 0.15);
+    
+    /* Typography */
+    --font-heading: 'Inter', system-ui, sans-serif;
+    --font-body: 'Inter', system-ui, sans-serif;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 25 15% 8%;
+    --foreground: 40 25% 90%;
+
+    --card: 25 15% 10%;
+    --card-foreground: 40 25% 90%;
+
+    --popover: 25 15% 10%;
+    --popover-foreground: 40 25% 90%;
+
+    --primary: 40 25% 90%;
+    --primary-foreground: 25 15% 8%;
+
+    --secondary: 25 10% 20%;
+    --secondary-foreground: 40 25% 90%;
+
+    --muted: 25 10% 20%;
+    --muted-foreground: 35 10% 60%;
+
+    --accent: 15 25% 65%;
+    --accent-foreground: 25 15% 8%;
+
+    --destructive: 0 60% 45%;
+    --destructive-foreground: 40 25% 90%;
+
+    --border: 25 10% 20%;
+    --input: 25 10% 20%;
+    --ring: 40 25% 80%;
+    
+    /* Custom dark tokens */
+    --warm-beige: 25 10% 25%;
+    --soft-brown: 25 35% 70%;
+    --dusty-rose: 15 25% 60%;
+    --cream: 25 15% 15%;
+    --espresso: 40 25% 90%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-body;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+}
